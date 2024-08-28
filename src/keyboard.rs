@@ -306,6 +306,37 @@ pub fn process_keyboard_data(raw_data: &RAWKEYBOARD, id: usize) -> Vec<RawEvent>
     if key == VK_OEM_8 {
         key_opt = Some(KeyId::BackTick);
     }
+    if key == VK_NUMPAD0 {
+        key_opt = Some(KeyId::NumPad0);
+    }
+    if key == VK_NUMPAD1 {
+        key_opt = Some(KeyId::NumPad1);
+    }
+    if key == VK_NUMPAD2 {
+        key_opt = Some(KeyId::NumPad2);
+    }
+    if key == VK_NUMPAD3 {
+        key_opt = Some(KeyId::NumPad3);
+    }
+    if key == VK_NUMPAD4 {
+        key_opt = Some(KeyId::NumPad4);
+    }
+    if key == VK_NUMPAD5 {
+        key_opt = Some(KeyId::NumPad5);
+    }
+    if key == VK_NUMPAD6 {
+        key_opt = Some(KeyId::NumPad6);
+    }
+    if key == VK_NUMPAD7 {
+        key_opt = Some(KeyId::NumPad7);
+    }
+    if key == VK_NUMPAD8 {
+        key_opt = Some(KeyId::NumPad8);
+    }
+    if key == VK_NUMPAD9 {
+        key_opt = Some(KeyId::NumPad9);
+    }
+
 
     if let Some(key_id) = key_opt {
         output.push(RawEvent::KeyboardEvent(id, key_id, key_state));
